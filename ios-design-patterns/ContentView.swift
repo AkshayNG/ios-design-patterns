@@ -9,8 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            Text("Hello, world!")
+                .padding()
+        }.onAppear {
+            self.useSingleton()
+        }
+        
+    }
+    
+    func useSingleton(){
+        Singleton.shared.set("Dark", forKey: "Theme")
+        let theme = Singleton.shared.object(forKey: "Theme")
+        print(theme ?? "No Theme")
     }
 }
 
