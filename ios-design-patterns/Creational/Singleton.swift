@@ -5,8 +5,13 @@
 //  Created by Akshay Gajarlawar on 23/05/21.
 //
 
+/*
 //TIP:
-//We use DispatchQueue to make singleton class thread-safe
+1. Use DispatchQueue to make singleton class thread-safe
+2. Adhere to the Single Responsibility Principle
+3. Avoid tight coupling
+4. Singleton classes must not adopt the NSCopying protocol
+*/
 
 import Foundation
 

@@ -13,7 +13,8 @@ struct ContentView: View {
             Text("Hello, world!")
                 .padding()
         }.onAppear {
-            self.useSingleton()
+            //self.useSingleton()
+            self.usePrototype()
         }
         
     }
@@ -22,6 +23,16 @@ struct ContentView: View {
         Singleton.shared.set("Dark", forKey: "Theme")
         let theme = Singleton.shared.object(forKey: "Theme")
         print(theme ?? "No Theme")
+    }
+    
+    func usePrototype() {
+        let p1 = Prototype.init(x: 1, y: 2, shape: Shape.init(type: "Circle", size: 33))
+        let p2 = p1.copy() as! Prototype
+        p2.x = 3
+        p2.y = 4
+        p2.shape.type = "Square"
+        p2.shape.size = 44
+        print("p1: \(p1),\np2: \(p2)")
     }
 }
 

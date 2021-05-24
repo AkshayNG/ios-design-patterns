@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BAA01453265B5151000DEAF5 /* Prototype.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA01452265B5151000DEAF5 /* Prototype.swift */; };
 		BAD71112265A91EF00CA3969 /* ios_design_patternsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD71111265A91EF00CA3969 /* ios_design_patternsApp.swift */; };
 		BAD71114265A91EF00CA3969 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD71113265A91EF00CA3969 /* ContentView.swift */; };
 		BAD71116265A91F000CA3969 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAD71115265A91F000CA3969 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BAA01452265B5151000DEAF5 /* Prototype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prototype.swift; sourceTree = "<group>"; };
 		BAD7110E265A91EF00CA3969 /* ios-design-patterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-design-patterns.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD71111265A91EF00CA3969 /* ios_design_patternsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_design_patternsApp.swift; sourceTree = "<group>"; };
 		BAD71113265A91EF00CA3969 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				BAD71145265A986900CA3969 /* Singleton.swift */,
+				BAA01452265B5151000DEAF5 /* Prototype.swift */,
 			);
 			path = Creational;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAA01453265B5151000DEAF5 /* Prototype.swift in Sources */,
 				BAD71114265A91EF00CA3969 /* ContentView.swift in Sources */,
 				BAD71146265A986900CA3969 /* Singleton.swift in Sources */,
 				BAD71112265A91EF00CA3969 /* ios_design_patternsApp.swift in Sources */,
