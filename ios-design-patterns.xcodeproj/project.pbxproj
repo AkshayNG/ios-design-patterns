@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		BAA01453265B5151000DEAF5 /* Prototype.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA01452265B5151000DEAF5 /* Prototype.swift */; };
+		BAC07D2D26601CB200A1361C /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC07D2C26601CB200A1361C /* Builder.swift */; };
+		BAC07D332660225400A1361C /* Laptop.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC07D322660225400A1361C /* Laptop.swift */; };
+		BAC07D382660235200A1361C /* Director.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC07D372660235200A1361C /* Director.swift */; };
+		BAC07D3D266026A900A1361C /* LaptopBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC07D3C266026A900A1361C /* LaptopBuilder.swift */; };
 		BAD71112265A91EF00CA3969 /* ios_design_patternsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD71111265A91EF00CA3969 /* ios_design_patternsApp.swift */; };
 		BAD71114265A91EF00CA3969 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD71113265A91EF00CA3969 /* ContentView.swift */; };
 		BAD71116265A91F000CA3969 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAD71115265A91F000CA3969 /* Assets.xcassets */; };
@@ -36,6 +40,10 @@
 
 /* Begin PBXFileReference section */
 		BAA01452265B5151000DEAF5 /* Prototype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prototype.swift; sourceTree = "<group>"; };
+		BAC07D2C26601CB200A1361C /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		BAC07D322660225400A1361C /* Laptop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Laptop.swift; sourceTree = "<group>"; };
+		BAC07D372660235200A1361C /* Director.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Director.swift; sourceTree = "<group>"; };
+		BAC07D3C266026A900A1361C /* LaptopBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaptopBuilder.swift; sourceTree = "<group>"; };
 		BAD7110E265A91EF00CA3969 /* ios-design-patterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-design-patterns.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD71111265A91EF00CA3969 /* ios_design_patternsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_design_patternsApp.swift; sourceTree = "<group>"; };
 		BAD71113265A91EF00CA3969 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +84,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BAC07D312660223600A1361C /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				BAC07D2C26601CB200A1361C /* Builder.swift */,
+				BAC07D372660235200A1361C /* Director.swift */,
+				BAC07D322660225400A1361C /* Laptop.swift */,
+				BAC07D3C266026A900A1361C /* LaptopBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 		BAD71105265A91EE00CA3969 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +159,7 @@
 		BAD7113F265A920A00CA3969 /* Creational */ = {
 			isa = PBXGroup;
 			children = (
+				BAC07D312660223600A1361C /* Builder */,
 				BAD71145265A986900CA3969 /* Singleton.swift */,
 				BAA01452265B5151000DEAF5 /* Prototype.swift */,
 			);
@@ -291,8 +311,12 @@
 			files = (
 				BAA01453265B5151000DEAF5 /* Prototype.swift in Sources */,
 				BAD71114265A91EF00CA3969 /* ContentView.swift in Sources */,
+				BAC07D382660235200A1361C /* Director.swift in Sources */,
 				BAD71146265A986900CA3969 /* Singleton.swift in Sources */,
 				BAD71112265A91EF00CA3969 /* ios_design_patternsApp.swift in Sources */,
+				BAC07D3D266026A900A1361C /* LaptopBuilder.swift in Sources */,
+				BAC07D2D26601CB200A1361C /* Builder.swift in Sources */,
+				BAC07D332660225400A1361C /* Laptop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

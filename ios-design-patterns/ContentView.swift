@@ -14,7 +14,8 @@ struct ContentView: View {
                 .padding()
         }.onAppear {
             //self.useSingleton()
-            self.usePrototype()
+            //self.usePrototype()
+            self.useBuilder()
         }
         
     }
@@ -33,6 +34,37 @@ struct ContentView: View {
         p2.shape.type = "Square"
         p2.shape.size = 44
         print("p1: \(p1),\np2: \(p2)")
+    }
+    
+    func useBuilder() {
+        //1.
+        var configuration = ["base_model": "budget"]
+        var laptopBuilder = Builder.createLaptopBuilder(configuration: configuration)
+        var director = Director(builder: laptopBuilder)
+        director.constructLaptop(configuration: configuration)
+        if let laptop = laptopBuilder?.getLaptop() {
+            print(laptop)
+        }
+
+        configuration = ["base_model": "office",
+                         "size": "13-inch"]
+        laptopBuilder = Builder.createLaptopBuilder(configuration: configuration)
+        director = Director(builder: laptopBuilder)
+        director.constructLaptop(configuration: configuration)
+        if let laptop = laptopBuilder?.getLaptop() {
+            print(laptop)
+        }
+
+        configuration = ["base_model": "high-end",
+                         "size": "13-inch",
+                         "graphics": "intel-iris-plus-graphics-645"]
+        laptopBuilder = Builder.createLaptopBuilder(configuration: configuration)
+        director = Director(builder: laptopBuilder)
+        director.constructLaptop(configuration: configuration)
+        if let laptop = laptopBuilder?.getLaptop() {
+            print(laptop)
+        }
+
     }
 }
 
