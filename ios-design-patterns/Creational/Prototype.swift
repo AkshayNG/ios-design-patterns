@@ -48,6 +48,7 @@ extension Shape: CustomStringConvertible {
     }
 }
 
+// For Deep Copying, Shallow copy otherwise
 extension Shape: NSCopying {
     func copy(with zone: NSZone? = nil) -> Any {
         return Shape.init(type: type, size: size)

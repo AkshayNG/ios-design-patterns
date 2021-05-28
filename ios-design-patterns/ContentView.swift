@@ -8,16 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var backgroundColor: Color?
+    @State var textColor: Color?
+    
     var body: some View {
         NavigationView {
-            Text("Hello, world!")
-                .padding()
+            ZStack {
+                backgroundColor
+                Text("Hello, world!")
+                    .foregroundColor(self.textColor)
+                    .padding()
+            }
+            
         }.onAppear {
             //self.useSingleton()
             //self.usePrototype()
-            self.useBuilder()
+            //self.useBuilder()
+            self.useFactoryMethod()
         }
-        
     }
     
     func useSingleton(){
@@ -46,6 +55,7 @@ struct ContentView: View {
             print(laptop)
         }
 
+        //2
         configuration = ["base_model": "office",
                          "size": "13-inch"]
         laptopBuilder = Builder.createLaptopBuilder(configuration: configuration)
@@ -55,6 +65,7 @@ struct ContentView: View {
             print(laptop)
         }
 
+        //3
         configuration = ["base_model": "high-end",
                          "size": "13-inch",
                          "graphics": "intel-iris-plus-graphics-645"]
@@ -64,7 +75,12 @@ struct ContentView: View {
         if let laptop = laptopBuilder?.getLaptop() {
             print(laptop)
         }
-
+    }
+    
+    func useFactoryMethod() {
+        let theme = FactoryMethod.makeTheme(profile: .dark)
+        backgroundColor = theme.backgroundColor
+        textColor = theme.textColor
     }
 }
 

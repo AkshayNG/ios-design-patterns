@@ -8,6 +8,7 @@
 import Foundation
 
 // Builder: separates creation of object from their config
+// Encapsulates object creational logic, so client don't need to know underlying values and logic
 
 class Builder {
     
