@@ -25,7 +25,7 @@ struct ContentView: View {
             //self.useSingleton()
             //self.usePrototype()
             //self.useBuilder()
-            self.useFactoryMethod()
+            //self.useFactoryMethod()
         }
     }
     
@@ -81,6 +81,10 @@ struct ContentView: View {
         let theme = FactoryMethod.makeTheme(profile: .dark)
         backgroundColor = theme.backgroundColor
         textColor = theme.textColor
+    }
+    
+    func useAbstractFactory() {
+        
     }
 }
 
