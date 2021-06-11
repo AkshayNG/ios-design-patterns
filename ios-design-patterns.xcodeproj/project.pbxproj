@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BA4F726A26616F1C002C2401 /* ThemeCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4F726926616F1C002C2401 /* ThemeCreator.swift */; };
 		BA4F727226616F5E002C2401 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4F727126616F5E002C2401 /* Theme.swift */; };
+		BA5DEEA02673283D00E76EFB /* PackageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DEE9F2673283D00E76EFB /* PackageFactory.swift */; };
 		BAA01453265B5151000DEAF5 /* Prototype.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA01452265B5151000DEAF5 /* Prototype.swift */; };
 		BAB91F75266F16B6004DC9C2 /* ProblemWithFactoryMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB91F74266F16B6004DC9C2 /* ProblemWithFactoryMethod.swift */; };
 		BAC07D2D26601CB200A1361C /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC07D2C26601CB200A1361C /* Builder.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		BA4F726926616F1C002C2401 /* ThemeCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCreator.swift; sourceTree = "<group>"; };
 		BA4F727126616F5E002C2401 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		BA5DEE9F2673283D00E76EFB /* PackageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageFactory.swift; sourceTree = "<group>"; };
 		BAA01452265B5151000DEAF5 /* Prototype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prototype.swift; sourceTree = "<group>"; };
 		BAB91F74266F16B6004DC9C2 /* ProblemWithFactoryMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemWithFactoryMethod.swift; sourceTree = "<group>"; };
 		BAC07D2C26601CB200A1361C /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				BAB91F74266F16B6004DC9C2 /* ProblemWithFactoryMethod.swift */,
+				BA5DEE9F2673283D00E76EFB /* PackageFactory.swift */,
 			);
 			path = "Abstract Factory";
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				BAD71146265A986900CA3969 /* Singleton.swift in Sources */,
 				BAD71112265A91EF00CA3969 /* ios_design_patternsApp.swift in Sources */,
 				BAB91F75266F16B6004DC9C2 /* ProblemWithFactoryMethod.swift in Sources */,
+				BA5DEEA02673283D00E76EFB /* PackageFactory.swift in Sources */,
 				BAC07D3D266026A900A1361C /* LaptopBuilder.swift in Sources */,
 				BA4F727226616F5E002C2401 /* Theme.swift in Sources */,
 				BAC07D2D26601CB200A1361C /* Builder.swift in Sources */,

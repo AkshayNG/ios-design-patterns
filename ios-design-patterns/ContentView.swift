@@ -26,6 +26,7 @@ struct ContentView: View {
             //self.usePrototype()
             //self.useBuilder()
             //self.useFactoryMethod()
+            self.useAbstractFactory()
         }
     }
     
@@ -84,7 +85,10 @@ struct ContentView: View {
     }
     
     func useAbstractFactory() {
-        
+        let standard = Package.createPackage(packageType: .standardPackage)
+        print("STANDARD :: \(standard.room), \(standard.food)")
+        let premium = Package.createPackage(packageType: .premiumPackage)
+        print("PREMIUM :: \(premium.room), \(premium.food)")
     }
 }
 

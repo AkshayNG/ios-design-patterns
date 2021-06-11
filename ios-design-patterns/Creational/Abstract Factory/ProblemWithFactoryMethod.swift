@@ -11,9 +11,10 @@ import Foundation
 //Ref: https://youtu.be/IglWExgxA-U
 // There is a Room and Food Package, standard room must recieve standard package and premium room must recieve premium package
 
-enum Package {
+enum PackageType {
     case standardPackage, premiumPackage
 }
+
 
 //1. Room
 enum BedType {
@@ -21,32 +22,32 @@ enum BedType {
 }
 
 struct Room {
-    var package: Package
+    var packageType: PackageType
     var bedType: BedType
 }
 
 class RoomFactory {
     //create room based on package and bed type
-    func createRoom(package: Package, bedType: BedType) -> Room {
-        return Room.init(package: package, bedType: bedType)
+    func createRoom(packageType: PackageType, bedType: BedType) -> Room {
+        return Room.init(packageType: packageType, bedType: bedType)
     }
 }
 
 
 //2. Food
-enum MealOption {
+enum MealType {
     case standardMeal, premiumMeal
 }
 
 struct Food {
-    var package: Package
-    var meal: MealOption
+    var packageType: PackageType
+    var mealType: MealType
 }
 
 class FoodFactory {
     //create room based on package and bed type
-    func createFood(package: Package, mealOption: MealOption) -> Food {
-        return Food.init(package: package, meal: mealOption)
+    func createFood(packageType: PackageType, mealType: MealType) -> Food {
+        return Food.init(packageType: packageType, mealType: mealType)
     }
 }
 
@@ -56,17 +57,17 @@ let rf = RoomFactory()
 let ff = FoodFactory()
 
 //OK
-let standardRoom = rf.createRoom(package: .standardPackage, bedType: .standardBed)
-let premiumRoom = rf.createRoom(package: .premiumPackage, bedType: .premiumBed)
-let standardFood = ff.createFood(package: .standardPackage, mealOption: .standardMeal)
-let premiumFood = ff.createFood(package: .premiumPackage, mealOption: .premiumMeal)
+let standardRoom = rf.createRoom(packageType: .standardPackage, bedType: .standardBed)
+let premiumRoom = rf.createRoom(packageType: .premiumPackage, bedType: .premiumBed)
+let standardFood = ff.createFood(packageType: .standardPackage, mealType: .standardMeal)
+let premiumFood = ff.createFood(packageType: .premiumPackage, mealType: .premiumMeal)
 
 //PROBLEM
-//We are allowed to create room with standard package and premium bed and vice versa
+//We are also allowed to create room with standard package and premium bed and vice versa
 //Similarly, we can create food with standard package and premium meal and vice versa
-let conflictStandardRoom = rf.createRoom(package: .standardPackage, bedType: .premiumBed)
-let conflictPremiumRoom = rf.createRoom(package: .premiumPackage, bedType: .standardBed)
-let conflictStandardFood = ff.createFood(package: .standardPackage, mealOption: .premiumMeal)
-let conflictPremiumFood = ff.createFood(package: .premiumPackage, mealOption: .standardMeal)
+let conflictStandardRoom = rf.createRoom(packageType: .standardPackage, bedType: .premiumBed)
+let conflictPremiumRoom = rf.createRoom(packageType: .premiumPackage, bedType: .standardBed)
+let conflictStandardFood = ff.createFood(packageType: .standardPackage, mealType: .premiumMeal)
+let conflictPremiumFood = ff.createFood(packageType: .premiumPackage, mealType: .standardMeal)
 
 //So, Apple store must provide iPhone with Apple charger, not with Samsung charger :)
